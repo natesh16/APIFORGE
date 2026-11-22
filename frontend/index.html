@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="APIFORGE — manage, secure, route, and observe your APIs in one place."
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>APIFORGE · API management, forged</title>
+    <link rel="stylesheet" href="/src/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#" aria-label="APIFORGE home">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">APIFORGE</span>
+        </a>
+        <nav class="nav-links">
+          <a href="#how-it-works">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+        </nav>
+        <a class="button button--primary" href="#start">Start building</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero: live demo is the characteristic thing in an API platform's world -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <h1 id="hero-heading" class="hero-title">
+              Manage APIs.<br />
+              Forge the rest.
+            </h1>
+            <p class="hero-lede">
+              APIFORGE is the control plane for your APIs: issue keys, define
+              routes, enforce rate limits, and observe traffic — without the
+              templated SaaS chrome.
+            </p>
+            <div class="hero-actions">
+              <a class="button button--primary" href="#start">Start building</a>
+              <a class="button button--outline" href="#docs">View docs</a>
+            </div>
+          </div>
+
+          <div class="hero-demo" aria-label="Live API request/response demo">
+            <div class="demo-frame">
+              <div class="demo-bar">
+                <span class="demo-dot"></span>
+                <span class="demo-dot"></span>
+                <span class="demo-dot"></span>
+                <span class="demo-url" id="demo-url">POST /v1/charges</span>
+              </div>
+              <div class="demo-code" id="demo-code">
+<pre><code class="language-json">{
+  "amount": 2500,
+  "currency": "usd",
+  "idempotency_key": "ch_1Q4m2..."
+}</code></pre>
+              </div>
+              <div class="demo-status" id="demo-status">
+                <span class="status-indicator"></span>
+                <span class="status-text">Ready</span>
+              </div>
+              <button class="button button--small button--accent" id="demo-send">
+                Send request
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works: genuine sequence, so numbered markers are appropriate -->
+      <section id="how-it-works" class="section section--numbered" aria-labelledby="how-heading">
+        <div class="section-inner">
+          <div class="section-text">
+            <h2 id="how-heading" class="section-title">How it works</h2>
+            <p class="section-dek">
+              Three steps from zero to production traffic.
+            </p>
+            <ol class="steps">
+              <li>
+                <span class="step-num">01</span>
+                <div class="step-body">
+                  <h3 class="step-title">Issue a key</h3>
+                  <p class="step-desc">
+                    Create an API key in the dashboard or via the Admin API. Each
+                    key is scoped to a workspace and carries its own rate limit.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">02</span>
+                <div class="step-body">
+                  <h3 class="step-title">Define a route</h3>
+                  <p class="step-desc">
+                    Map an inbound path to your upstream service. Add rewrite
+                    rules, headers, and authentication requirements.
+                  </p>
+                </div>
+              </li>
+              <li>
+                <span class="step-num">03</span>
+                <div class="step-body">
+                  <h3 class="step-title">Observe traffic</h3>
+                  <p class="step-desc">
+                    Watch request logs, latency, and error rates in real time.
+                    Set alerts on the metrics that matter to your team.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="section-image" aria-hidden="true">
+            <div class="route-diagram">
+              <div class="node node--client">Client</div>
+              <div class="node node--forge arrow">APIFORGE</div>
+              <div class="node node--upstream">Upstream</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section id="features" class="section" aria-labelledby="features-heading">
+        <div class="section-inner">
+          <div class="section-text">
+            <h2 id="features-heading" class="section-title">Built for infra teams</h2>
+            <p class="section-dek">
+              The primitives you need, without the decoration that gets in the
+              way.
+            </p>
+          </div>
+          <ul class="feature-list">
+            <li class="feature-item">
+              <h3 class="feature-title">API keys</h3>
+              <p class="feature-desc">
+                Issue, rotate, and revoke keys. Scope each key to a workspace
+                with its own quota and rate limit.
+              </p>
+            </li>
+            <li class="feature-item">
+              <h3 class="feature-title">Routes</h3>
+              <p class="feature-desc">
+                Map inbound paths to upstreams with rewrites, headers, and
+                auth requirements defined in code.
+              </p>
+            </li>
+            <li class="feature-item">
+              <h3 class="feature-title">Rate limiting</h3>
+              <p class="feature-desc">
+                Enforce per-key or per-IP limits with sliding windows and
+                graceful degradation.
+              </p>
+            </li>
+            <li class="feature-item">
+              <h3 class="feature-title">Observability</h3>
+              <p class="feature-desc">
+                Request logs, latency histograms, and error rates in real time.
+                Alert on what matters.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Pricing -->
+      <section id="pricing" class="section section--pricing" aria-labelledby="pricing-heading">
+        <div class="section-inner">
+          <div class="section-text">
+            <h2 id="pricing-heading" class="section-title">Simple, metered pricing</h2>
+            <p class="section-dek">
+              Pay for what you use. No tiers that force you into a plan you
+              don't need.
+            </p>
+          </div>
+          <div class="pricing-table" role="table" aria-label="Pricing plans">
+            <div class="pricing-row pricing-row--head" role="row">
+              <span role="columnheader">Plan</span>
+              <span role="columnheader">Requests / month</span>
+              <span role="columnheader">Price</span>
+            </div>
+            <div class="pricing-row" role="row">
+              <span class="plan-name" role="cell">Starter</span>
+              <span role="cell">Up to 100k</span>
+              <span class="plan-price" role="cell">Free</span>
+            </div>
+            <div class="pricing-row pricing-row--featured" role="row">
+              <span class="plan-name" role="cell">Growth</span>
+              <span role="cell">100k – 10M</span>
+              <span class="plan-price" role="cell">$0.10 per 1k</span>
+            </div>
+            <div class="pricing-row" role="row">
+              <span class="plan-name" role="cell">Enterprise</span>
+              <span role="cell">10M+</span>
+              <span class="plan-price" role="cell">Contact us</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--cta" aria-labelledby="cta-heading">
+        <div class="section-inner">
+          <div class="cta-card">
+            <h2 id="cta-heading" class="cta-title">Ready to ship?</h2>
+            <p class="cta-desc">
+              Create your first workspace in under a minute. No credit card
+              required.
+            </p>
+            <a class="button button--primary" href="#start">Create workspace</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-mark">A</span>
+          <span class="brand-name">APIFORGE</span>
+        </div>
+        <p class="footer-note">
+          API management, forged. Built for engineering teams.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

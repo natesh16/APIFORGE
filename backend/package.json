@@ -1,0 +1,46 @@
+{
+  "name": "apiforge-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "APIForge Management API",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "test": "jest --runInBand --detectOpenHandles",
+    "test:coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@apiforge/shared": "*",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.5.0",
+    "pino": "^9.2.0",
+    "pino-http": "^10.2.0",
+    "vite": "8.3.8",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "mongodb-memory-server": "^10.0.0",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "testTimeout": 30000
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "apiforge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "APIForge — multi-tenant API management platform",
+  "workspaces": [
+    "shared",
+    "backend",
+    "gateway",
+    "worker",
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "npm run dev --workspace apiforge-backend",
+    "start:backend": "npm run start --workspace apiforge-backend",
+    "test:backend": "npm test --workspace apiforge-backend"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
